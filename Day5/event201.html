@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<dl>
+		<dt>What are your hours?</dt>
+		<dd>we are open 24/7.</dd>
+
+		<dt>What are your hours?</dt>
+		<dd>we are open 24/7.</dd>
+
+		<dt>What are your hours?</dt>
+		<dd>we are open 24/7.</dd>
+
+		<dt>What are your hours?</dt>
+		<dd>we are open 24/7.</dd>
+
+		<dt>What are your hours?</dt>
+		<dd>we are open 24/7.</dd>
+	</dl>
+	<script src="jquery-3.0.0.js"></script>
+	<script>
+ 
+ 	(function() {
+ 		var dd = $('dd');
+ 		dd.filter(':nth-child(n+4)').addClass('hide');
+
+ 		$('dt').on('mouseenter',function() {
+ 			$(this).next().slideDown(200).siblings('dd').slideUp(200);
+ 		//	$(this).next().show();
+ 		});
+
+ 	})();
+		
+	</script>
+</body>
+</html>

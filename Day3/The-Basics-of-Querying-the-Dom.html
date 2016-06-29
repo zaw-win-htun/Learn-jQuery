@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.container{
+			color: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Welcome to my Websie</h1>
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. A similique fuga, consequuntur quis quasi eaque, facilis corporis, perspiciatis nemo ullam ducimus labore. Dicta tempore praesentium eos adipisci asperiores, iure voluptatem!
+		</p>
+	
+	
+	<div class="container">
+		<ul class="emphasis container">
+			<li>Item </li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+			<li>Item 5</li>
+			<li>
+				<ul>
+					<li>hello from the nest</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+
+	</div>
+
+
+	<script src="jquery-3.0.0.js"></script>
+	<script>
+		//$('ul.emphasis').children('li').css('color','green');
+		// $('ul.emphasis').children('li').first().addClass('emphasis');
+		 //$('ul.emphasis').children('li').eq(4).prev().text('added with jquery-3');
+
+		 //$('li').parent().removeClass('emphasis'); 
+		 console.log($('ul').parents('.container'));
+		 console.log($('ul').closest('.container'));
+
+
+	</script>
+</body>
+</html>

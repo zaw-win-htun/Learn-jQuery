@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet">
+</head>
+<body>
+
+	<article>
+		<h1>My Awesome post</h1>
+
+		<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum non numquam quibusdam perferendis ex placeat pariatur deserunt reprehenderit. Ipsum voluptate ab, aspernatur aut ipsam nihil debitis enim impedit facere provident!
+		</p>
+
+		<p>
+		<span class="co">Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Incidunt saepe numquam assumenda error. Quidem ea repudiandae voluptatum voluptatibus, recusandae quasi rerum laboriosam hic, sint tempora deserunt ipsa, similique et vel.
+		</p>
+
+	
+	</article>
+
+	<script src="jquery-3.0.0.js"></script>
+	<script>
+ 
+ 	(function() {
+
+ 		//$('p').first().before('hello from the javascript');
+ 		//$('<h2>Hello from the javascript</h2>').appendTo('article');
+
+ 		/*$('<h2></h2>' , {
+ 			text : 'Hello from the javascript',
+ 			class : 'myclass'
+ 		}).insertAfter('h1');*/
+
+ 		/*$('<h2></h2>' , {
+ 			text : 'Hello from the javascript',
+ 			class : 'myclass'
+ 		}).insertBefore('p:nth-child(3)');
+		*/
+
+		//$('p').eq(0).after( $('h1') );
+
+		var co = $('span.co').each(function() {
+			var $this = $(this);
+			$('<blockquote></blockquote>',{
+				class:'co',
+				text:$this.text()
+			}).prependTo($this.closest('p'));
+		});
+
+ 	})();
+		
+	</script>
+</body>
+</html>
+
